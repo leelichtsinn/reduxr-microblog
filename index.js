@@ -6,22 +6,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
-import Counter from './components/Counter';
+import MicroBlog from './components/MicroBlog';
 import counter from './reducers';
-import { INCREMENT, DECREMENT } from './actions';
+import { SAVE, LIST, DELETE } from './actions';
 
 /* eslint-disable no-underscore-dangle */
-const store = createStore(counter,
+const store = createStore(reduxr,
   window.__REDUX_DEVTOOLS_EXTENSION__ &&
   window.__REDUX_DEVTOOLS_EXTENSION__());
 /* eslint-enable */
 
 const render = () => ReactDOM.render(
-  <Counter
-    value={store.getState()}
-    onIncrement={() => store.dispatch({ type: INCREMENT })}
-    onDecrement={() => store.dispatch({ type: DECREMENT })}
-  />,
+  <Provider store={store}>
+    <MicroBlogApp />
+  </Provider>,
   document.getElementById('root')
 );
 

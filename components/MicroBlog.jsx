@@ -1,7 +1,7 @@
-// Create components/Counter.jsx
-import React, { Component } from 'react'
+// Create components/MicroBlog.jsx
+import React, { Component } from 'react';
 
-const Counter = ({ value, onIncrement, onDecrement }) => (
+const MicroBlog = ({ value, onIncrement, onDecrement }) => (
   <div>
     <h1> Value: {value} </h1>
     <button onClick={onIncrement}> + </button>

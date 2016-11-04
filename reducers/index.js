@@ -1,13 +1,15 @@
 // reducers/index.js
-import { INCREMENT, DECREMENT } from '../actions';
+import { SAVE, LIST, DELETE } from '../actions';
 
-const initialState = 0;
+const initialState = {};
 export default (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT:
-      return state + 1;
-    case DECREMENT:
-      return state - 1;
+    case SAVE:
+      return ;
+    case LIST:
+      return ;
+    case DELETE:
+      return ;
     default:
       return state;
   }
